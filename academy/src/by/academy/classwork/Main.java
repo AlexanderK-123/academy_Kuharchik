@@ -12,3 +12,4 @@ public class Main {
 		System.out.println("you got " + yourMark + ", average mark is " + averageMark);
 	}
 }
+
