@@ -1,16 +1,20 @@
 package by.academy.classwork.lesson05;
 
+import java.util.Scanner;
+
 public class Main {
 	//
 	public static void main(String... strings) {
-		//User seller = new User();
-		//User buyer = new User();
-		//Product[] products = { new Product() };
+		User seller = new User("Ivan");
+		User buyer = new User("Vlad");
 		
-		//Deal deal = new Deal(seller, buyer, products);
+		Scanner in = new Scanner(System.in);
+		String str = in.nextLine();
 		
-		//Deal deal1 = new Deal(1);
-		//Deal deal2 = new Deal(new Integer(1)); 
-		//Deal deal3 = new Deal(Integer.MAX_VALUE); 
+		
+		Product[] products = { new Product() };
+		
+		Deal deal = new Deal(seller, buyer, products);
+		 
 	}
 }
