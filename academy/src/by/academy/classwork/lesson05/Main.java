@@ -1,6 +1,7 @@
 package by.academy.classwork.lesson05;
 
 public class Main {
+	//new
 	public static void main(String... strings) {
 		User seller = new User();
 		User buyer = new User();

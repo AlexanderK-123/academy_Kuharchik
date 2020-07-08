@@ -1,7 +1,7 @@
 package by.academy.classwork.lesson05;
 
 public class Product {
-	
+	//new
 	private String name;
 	private double price;
 	

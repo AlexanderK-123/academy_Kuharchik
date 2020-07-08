@@ -1,7 +1,7 @@
 package by.academy.classwork.lesson05;
 
 public class User {
-	
+	//new
 	private String name;
 	
 	public User(){
