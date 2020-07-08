@@ -9,6 +9,10 @@ public class Deal {
 		super();
 	}
 	
+	public Deal(int i) {
+		super();
+	}
+	
 	public Deal(User seller,  User buyer, Product[] products) {
 		super();
 		this.seller = seller;
