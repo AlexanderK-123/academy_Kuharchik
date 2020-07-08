@@ -2,7 +2,7 @@ package by.academy.classwork.lesson05;
 
 public class Deal {
 	
-	//
+	//N
 	private User seller;
 	private User buyer;
 	private Product[] products;
