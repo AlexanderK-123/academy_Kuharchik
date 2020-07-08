@@ -2,8 +2,8 @@ package by.academy.classwork.lesson05;
 
 public class Product {
 	
-	String name;
-	double price;
+	private String name;
+	private double price;
 	
 	
 	public Product() {
