@@ -1,4 +1,4 @@
-package by.academy.classwork.lesson03;
+package by.academy.classwork.lesson03.array;
 
 public class Task2 {
 	public static void main(String...strings ) {

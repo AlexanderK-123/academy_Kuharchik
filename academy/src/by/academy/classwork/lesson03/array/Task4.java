@@ -1,4 +1,4 @@
-package by.academy.classwork.lesson03;
+package by.academy.classwork.lesson03.array;
 
 import java.util.Random;
 
