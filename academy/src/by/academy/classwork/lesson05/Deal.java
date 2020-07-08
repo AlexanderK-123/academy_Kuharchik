@@ -46,6 +46,8 @@ public class Deal {
 		this.products = products;
 	}
 	
-	
+	public void showDeal() {
+		System.out.println("Seller: " + seller.getName() + "; Buyer: " + buyer.getName());
+	}
 	
 }
