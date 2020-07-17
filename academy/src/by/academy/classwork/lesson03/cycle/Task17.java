@@ -2,17 +2,19 @@ package by.academy.classwork.lesson03.cycle;
 
 import java.util.Scanner;
 
-public class Task6 {
+public class Task17 {
 	public static void main(String... strings) {
-		System.out.println("Enter summ:");
+		System.out.println("Enter n:");
 		Scanner in = new Scanner(System.in);
-		double s = in.nextDouble();
-		System.out.println("Enter year:");
 		int n = in.nextInt();
+		double height = 0.0;
+		double res = 0.0;
+		System.out.println("Enter height:");
 		for (int i = 0; i < n; i++) {
-			s += s * 0.03;
+			height += in.nextDouble();
 		}
-		System.out.println("Result: " + s);
 		in.close();
+		res = height / (double) n;
+		System.out.println(res);
 	}
 }

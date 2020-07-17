@@ -3,7 +3,7 @@ package by.academy.classwork.lesson03.cycle;
 import java.util.Scanner;
 
 public class Task4 {
-	public static void main(String...strings) {
+	public static void main(String... strings) {
 		System.out.println("Enter number:");
 		Scanner in = new Scanner(System.in);
 		int n = in.nextInt();
@@ -11,16 +11,14 @@ public class Task4 {
 		int c_neg = 0;
 		int c_null = 0;
 		System.out.println("Enter " + n + " numbers:");
-		for(int i = 0; i < n; i++) {
+		for (int i = 0; i < n; i++) {
 			int a = in.nextInt();
-			if(a > 0) {
+			if (a > 0) {
 				c_pos++;
-			}
-			else {
-				if(a < 0) {
+			} else {
+				if (a < 0) {
 					c_neg++;
-				}
-				else {
+				} else {
 					c_null++;
 				}
 			}
