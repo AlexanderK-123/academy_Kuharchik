@@ -7,7 +7,7 @@ public class Main {
 		char yourMark = 'A';
 		double averageMark = 4.12;
 		short test = 512;
-		System.out.println("your exam results: ");
+		System.out.println("your exam results: test is "+ test);
 		System.out.println("your age is: " + myAge + ", passport number: " + passportNumber);
 		System.out.println("you got " + yourMark + ", average mark is " + averageMark);
 	}
