@@ -2,6 +2,8 @@ package by.academy.classwork.lesson05;
 
 import java.util.Scanner;
 
+import by.academy.classwork.lesson9.Box;
+
 public class Main {
 	//
 	public static void main(String... strings) {
@@ -18,7 +20,12 @@ public class Main {
 		}
 		in.close();
 		
+
 		
+		Box<Product> prodBox = new Box();
+		prodBox.setItem(new Product());
+		
+		System.out.println(prodBox.getItem().getName());
 		
 		
 		Deal deal = new Deal(seller, buyer, products);

@@ -23,7 +23,7 @@ public class Task2 {
 			}
 		}
 	}
-	
+
 //	public static boolean isValidDataString(String stringDate) {
 //		//Matcher m1 = p1.matcher(stringDate);
 //		
