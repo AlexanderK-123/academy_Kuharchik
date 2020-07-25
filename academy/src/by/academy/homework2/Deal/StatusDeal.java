@@ -1,4 +1,4 @@
-package by.academy.classwork.lesson05;
+package by.academy.homework2.Deal;
 
 public enum StatusDeal {
 	NEW("New"), IN_PROGRESS("InProgress"), DONE("Done");

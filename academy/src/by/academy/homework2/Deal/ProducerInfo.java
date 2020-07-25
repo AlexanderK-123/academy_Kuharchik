@@ -1,4 +1,4 @@
-package by.academy.classwork.lesson05;
+package by.academy.homework2.Deal;
 
 import static java.lang.annotation.ElementType.FIELD;
 import static java.lang.annotation.ElementType.LOCAL_VARIABLE;

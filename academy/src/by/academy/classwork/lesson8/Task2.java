@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class Task2 {
 	public static void main(String... strings) {
 
-		String[] tests = { "01/02/1990", "0-102-1990", "43/11/1990", "49-9-2020" };
+		String[] tests = { "01/02/1990", "0-102-1990", "43/11/1990", "9-9-2020" };
 
 		Pattern p1 = Pattern.compile("^([0]?[1-9]|[1|2][0-9]|[3][0|1])/([0]?[1-9]|[1][0-2])/\\d{4}");
 		Pattern p2 = Pattern.compile("^([0]?[1-9]|[1|2][0-9]|[3][0|1])-([0]?[1-9]|[1][0-2])-\\d{4}");
@@ -23,9 +23,4 @@ public class Task2 {
 			}
 		}
 	}
-
-//	public static boolean isValidDataString(String stringDate) {
-//		//Matcher m1 = p1.matcher(stringDate);
-//		
-//	}
 }
