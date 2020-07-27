@@ -20,7 +20,7 @@ public class Main {
 		Product[] products = { new Product("PC", 2000, 5), new Banana("Yellow", 100, 10), new Phone("Sony", 1000, 5),
 				new Milk("White", 200, 10) };
 		Deal deal = new Deal(seller, buyer, products);
-		deal.showDeal();
+		deal.menu();
 
 	}
 

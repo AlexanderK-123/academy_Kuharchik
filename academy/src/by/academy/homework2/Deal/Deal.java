@@ -86,23 +86,37 @@ public class Deal {
 		System.out.println("Final price: " + countFinalPrice());
 	}
 
-	public static void menu(Deal d) {
+	public void menu() {
 		System.out.println("1 - add product;\n2 - delete product;\n3 - show deal.");
 		Scanner in = new Scanner(System.in);
 		int sw = in.nextInt();
+
 		switch (sw) {
 		case 1:
 			// products();
 			break;
 		case 2:
+			Product[] bufArr = new Product[products.length - 1];
 			System.out.println("Enter name of product:");
-			String s = in.nextLine();
+			String s = in.next();
+			int i;
+			for (i = 0; i < bufArr.length; i++) {
+				if (s == products[i].name) {
+					break;
+				}
+				bufArr[i] = products[i];
+			}
+			for (int j = i; j < products.length; j++) {
+				bufArr[j] = products[j + 1];
+			}
+			setProduct(bufArr);
+			in.close();
 			break;
 		case 3:
-			d.showDeal();
+			this.showDeal();
+			break;
+		default:
 			break;
 		}
-		in.close();
 	}
-
 }
