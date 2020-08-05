@@ -7,7 +7,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int n = 10_000_000;
+		int n = 100_000_000;
 		int maxR = 10;
 		int minR = 1;
 		ArrayList<Integer> aList = new ArrayList<Integer>();
@@ -27,7 +27,7 @@ public class Main {
 
 //		System.out.println("ArrayList " + (endMS - startMS) + "ms " + aList);
 //		System.out.println("LinkedList " + (endMS2 - startMS2) + "ms " + lList);
-		
+
 		System.out.println("ArrayList " + (endMS - startMS) + "ms");
 		System.out.println("LinkedList " + (endMS2 - startMS2) + "ms");
 	}
