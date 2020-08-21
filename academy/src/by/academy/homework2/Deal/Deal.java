@@ -1,15 +1,17 @@
 package by.academy.homework2.Deal;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class Deal {
 
 	private User seller;
 	private User buyer;
-	private Product[] products;
+	private ArrayList<Product> products;
 	private Date deadline;
 
 	public Deal() {
@@ -17,7 +19,7 @@ public class Deal {
 		init();
 	}
 
-	public Deal(User seller, User buyer, Product[] products) {
+	public Deal(User seller, User buyer, ArrayList<Product> products) {
 		super();
 		this.seller = seller;
 		this.buyer = buyer;
@@ -55,23 +57,25 @@ public class Deal {
 		this.buyer = buyer;
 	}
 
-	public Product[] getProduct() {
+	public ArrayList<Product> getProduct() {
 		return products;
 	}
 
-	public void setProduct(Product[] products) {
+	public void setProduct(ArrayList<Product> products) {
 		this.products = products;
 	}
 
 	private double countFinalPrice() {
+		Iterator<Product> iterator = products.iterator();
 		double finalPrice = 0;
-		for (int i = 0; i < products.length; i++) {
-			finalPrice += products[i].getPrice() * products[i].getQuantity();
+		while (iterator.hasNext()) {
+			finalPrice += iterator.next().getPrice() * iterator.next().getQuantity();
 		}
 		return finalPrice;
 	}
 
 	public void showDeal() {
+		Iterator<Product> iterator = products.iterator();
 		System.out.printf("Seller: %-10s\nBirth: %-10s\nPhone: %-11s\nEmail: %-20s\n", seller.getName(),
 				seller.getDateOfBirth(), seller.getPhone(), seller.getEmail());
 		System.out.println("------------------------------------------");
@@ -79,8 +83,8 @@ public class Deal {
 				buyer.getDateOfBirth(), buyer.getPhone(), buyer.getEmail());
 		System.out.println("------------------------------------------");
 		System.out.printf("\n%15s : %10s : %10s\n", "Product name", "Price", "Quantity");
-		for (int i = 0; i < products.length; i++) {
-			products[i].showProduct();
+		while (iterator.hasNext()) {
+			iterator.next().showProduct();
 		}
 		System.out.println("------------------------------------------");
 		System.out.println("Final price: " + countFinalPrice());
@@ -90,27 +94,22 @@ public class Deal {
 		System.out.println("1 - add product;\n2 - delete product;\n3 - show deal.");
 		Scanner in = new Scanner(System.in);
 		int sw = in.nextInt();
-
 		switch (sw) {
 		case 1:
-			// products();
+			Product product = new Product();
+			products.add(product.addProductMenu());
+			this.showDeal();
 			break;
 		case 2:
-			Product[] bufArr = new Product[products.length - 1];
 			System.out.println("Enter name of product:");
 			String s = in.next();
-			int i;
-			for (i = 0; i < bufArr.length; i++) {
-				if (s == products[i].name) {
-					break;
-				}
-				bufArr[i] = products[i];
-			}
-			for (int j = i; j < products.length; j++) {
-				bufArr[j] = products[j + 1];
-			}
-			setProduct(bufArr);
 			in.close();
+			for (int i = 0; i < products.size(); i++) {
+				if (products.get(i).getName() == s) {
+					products.remove(i);
+				}
+			}
+			this.showDeal();
 			break;
 		case 3:
 			this.showDeal();

@@ -38,6 +38,7 @@ public class BoxDemo<T> {
 		}
 	}
 
+	@SuppressWarnings("unchecked")
 	public void add(T item) {
 		if (array == null) {
 			return;
@@ -58,6 +59,7 @@ public class BoxDemo<T> {
 		counter = array.length;
 	}
 
+	@SuppressWarnings("unchecked")
 	public void addToIndex(T item, int index) {
 		if (array == null) {
 			return;

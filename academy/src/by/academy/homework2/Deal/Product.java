@@ -1,5 +1,7 @@
 package by.academy.homework2.Deal;
 
+import java.util.Scanner;
+
 @ProducerInfo(company = "", name = "")
 public class Product {
 
@@ -45,5 +47,18 @@ public class Product {
 
 	public void showProduct() {
 		System.out.printf("%15s : %10.2f : %10d\n", name, price, quantity);
+	}
+
+	public Product addProductMenu() {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Add product menu:");
+		System.out.println("Enter name of product:");
+		String name = in.nextLine();
+		System.out.println("Enter price of product:");
+		double price = in.nextDouble();
+		System.out.println("Enter quantity of product:");
+		int quantity = in.nextInt();
+		in.close();
+		return new Product(name, price, quantity);
 	}
 }

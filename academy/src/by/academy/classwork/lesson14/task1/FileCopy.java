@@ -10,9 +10,8 @@ public class FileCopy {
 		FileInputStream fileIn = null;
 		FileOutputStream fileOut = null;
 
-		FileInputStream in = new FileInputStream("in.txt");
-		FileOutputStream out = new FileOutputStream("out.txt");
-		try (in; out) {
+		try (FileInputStream in = new FileInputStream("in.txt");
+				FileOutputStream out = new FileOutputStream("out.txt")) {
 
 			int a;
 			while ((a = in.read()) != -1) {

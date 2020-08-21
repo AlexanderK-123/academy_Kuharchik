@@ -1,5 +1,6 @@
 package by.academy.homework2.Deal;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import by.academy.homework2.task5.BelarusPhoneValidator;
@@ -17,8 +18,11 @@ public class Main {
 
 		User seller = new User("Ivan", "01-01-2000");
 		User buyer = new User("Vlad", "03/04/1990");
-		Product[] products = { new Product("PC", 2000, 5), new Banana("Yellow", 100, 10), new Phone("Sony", 1000, 5),
-				new Milk("White", 200, 10) };
+		ArrayList<Product> products = new ArrayList<Product>();
+		products.add(new Product("PC", 2000, 5));
+		products.add(new Product("Yellow", 100, 10));
+		products.add(new Product("Sony", 1000, 5));
+		products.add(new Product("White", 200, 10));
 		Deal deal = new Deal(seller, buyer, products);
 		deal.menu();
 
