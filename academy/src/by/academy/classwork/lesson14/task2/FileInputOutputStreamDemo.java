@@ -30,8 +30,8 @@ public class FileInputOutputStreamDemo {
 			System.out.print("Exception");
 		}
 
-		try (OutputStream output = new FileOutputStream("./src/io/b.txt");
-				InputStream input = new FileInputStream("./src/io/b.txt")) {
+		try (OutputStream output = new FileOutputStream("./academy/src/io/b.txt");
+				InputStream input = new FileInputStream("./academy/src/io/b.txt")) {
 			char[] symbols = { 'd', 'e', 'f' };
 
 			for (int i = 0; i < symbols.length; i++) {
