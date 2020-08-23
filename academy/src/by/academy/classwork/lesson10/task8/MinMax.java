@@ -2,7 +2,6 @@ package by.academy.classwork.lesson10.task8;
 
 public class MinMax<T extends Number> {
 	private T[] array;
-	private T t;
 
 	public MinMax() {
 		super();
