@@ -1,7 +1,6 @@
 package by.academy.classwork.lesson14.task2;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
