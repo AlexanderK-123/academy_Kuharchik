@@ -12,7 +12,7 @@ public class Main {
 		Car car1 = new Car("Porsche", "Sport", 1200, d1, en1);
 		car1.printInfo();
 		
-		Box<Car> boxCar = new Box(car1);
+		Box<Car> boxCar = new Box<Car>(car1);
 		
 		boxCar.getItem().printInfo();
 		
