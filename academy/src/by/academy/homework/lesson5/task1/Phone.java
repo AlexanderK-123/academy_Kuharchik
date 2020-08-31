@@ -11,9 +11,6 @@ public class Phone implements Serializable {
 
 	public Phone() {
 		super();
-		this.number = 0;
-		this.model = null;
-		this.weight = 0;
 	}
 
 	public Phone(int number, String model) {
