@@ -1,6 +1,7 @@
 package by.academy.homework6.Task2;
 
 public class User extends Person {
+	
 	public String login;
 	private String password;
 	public String email;

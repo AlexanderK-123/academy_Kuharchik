@@ -19,6 +19,7 @@ public class Main {
 		System.out.println("Person:\n    getFields():");
 
 		Field[] personFields = personClass.getFields();
+		
 		for (Field field : personFields) {
 			Class<?> fieldType = field.getType();
 			System.out.println("        Èìÿ: " + field.getName());

@@ -1,6 +1,7 @@
 package by.academy.homework6.Task2;
 
 public class Person {
+	
 	public String firstName;
 	protected String lastName;
 	protected int age;

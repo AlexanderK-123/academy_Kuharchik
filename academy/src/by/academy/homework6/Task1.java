@@ -8,6 +8,7 @@ import java.util.stream.Stream;
 public class Task1 {
 
 	public static void main(String[] args) {
+		
 		Map<Long, String> map = Stream.generate(() -> new Random().nextInt(100)).
 				distinct().limit(100).
 				map(m -> (long) (m * Math.PI - 20)).
